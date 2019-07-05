@@ -91,7 +91,7 @@ ntpdate cn.pool.ntp.org
 echo "###########正在下载opencanary_agent#########"
 opencanary_folder="/usr/local/src/opencanary"
 if [ ! -d $opencanary_folder ]; then
-    git clone http://gitlab.lianlianpay.com/security/honey/agent.git /usr/local/src/opencanary
+    git clone https://github.com/p1r06u3/opencanary.git /usr/local/src/opencanary
 	configure_agent_name=`sed -n "2p"  /usr/local/src/opencanary/opencanary/data/settings.json | awk -F '["]+' '{print $4}'`
     configure_server_ip=`sed -n "3p"  /usr/local/src/opencanary/opencanary/data/settings.json | awk -F '["]+' '{print $4}'`
 	configure_ip=`sed -n "4p"  /usr/local/src/opencanary/opencanary/data/settings.json | awk -F '["]+' '{print $4}'`
